@@ -22,7 +22,6 @@ common/drop_mouse_on_gui_input_disabled=true
 [mono]
 
 project/assembly_name="Balancer"
-debugger_agent/wait_for_debugger=true
 
 [physics]
 

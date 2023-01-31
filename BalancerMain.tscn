@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://BalancerMain.cs" type="Script" id=1]
+[ext_resource path="res://balancer.png" type="Texture" id=2]
 
 [node name="MainWindow" type="Control"]
 anchor_right = 1.0
@@ -10,8 +11,9 @@ script = ExtResource( 1 )
 [node name="ModeSelectorTab" type="TabContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+tab_align = 0
 
-[node name="Control" type="HBoxContainer" parent="ModeSelectorTab"]
+[node name="Control" type="VBoxContainer" parent="ModeSelectorTab"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -19,6 +21,142 @@ margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
 
+[node name="PlateContainer" type="GridContainer" parent="ModeSelectorTab/Control"]
+margin_right = 1016.0
+margin_bottom = 384.0
+
+[node name="PlateIMG" type="TextureRect" parent="ModeSelectorTab/Control/PlateContainer"]
+margin_right = 1013.0
+margin_bottom = 384.0
+texture = ExtResource( 2 )
+
+[node name="HSeparator" type="HSeparator" parent="ModeSelectorTab/Control"]
+margin_top = 388.0
+margin_right = 1016.0
+margin_bottom = 392.0
+
+[node name="ControlsContainer" type="HBoxContainer" parent="ModeSelectorTab/Control"]
+margin_top = 396.0
+margin_right = 1016.0
+margin_bottom = 514.0
+
+[node name="CurrentSetPointContainer" type="VBoxContainer" parent="ModeSelectorTab/Control/ControlsContainer"]
+margin_right = 126.0
+margin_bottom = 118.0
+
+[node name="CurrentPositionLabel" type="Label" parent="ModeSelectorTab/Control/ControlsContainer/CurrentSetPointContainer"]
+margin_right = 126.0
+margin_bottom = 14.0
+text = "Current Position"
+align = 1
+
+[node name="CurrentXContainer" type="HBoxContainer" parent="ModeSelectorTab/Control/ControlsContainer/CurrentSetPointContainer"]
+margin_top = 18.0
+margin_right = 126.0
+margin_bottom = 42.0
+
+[node name="CurrentXLabel" type="Label" parent="ModeSelectorTab/Control/ControlsContainer/CurrentSetPointContainer/CurrentXContainer"]
+margin_top = 5.0
+margin_right = 64.0
+margin_bottom = 19.0
+text = "X position"
+
+[node name="CurrentXLineEdit" type="LineEdit" parent="ModeSelectorTab/Control/ControlsContainer/CurrentSetPointContainer/CurrentXContainer"]
+margin_left = 68.0
+margin_right = 126.0
+margin_bottom = 24.0
+text = "0"
+align = 2
+editable = false
+
+[node name="CurrentYContainer" type="HBoxContainer" parent="ModeSelectorTab/Control/ControlsContainer/CurrentSetPointContainer"]
+margin_top = 46.0
+margin_right = 126.0
+margin_bottom = 70.0
+
+[node name="CurrentYLabel" type="Label" parent="ModeSelectorTab/Control/ControlsContainer/CurrentSetPointContainer/CurrentYContainer"]
+margin_top = 5.0
+margin_right = 63.0
+margin_bottom = 19.0
+text = "Y position"
+
+[node name="CurrentYLineEdit" type="LineEdit" parent="ModeSelectorTab/Control/ControlsContainer/CurrentSetPointContainer/CurrentYContainer"]
+margin_left = 67.0
+margin_right = 125.0
+margin_bottom = 24.0
+text = "0"
+align = 2
+editable = false
+
+[node name="VSeparator" type="VSeparator" parent="ModeSelectorTab/Control/ControlsContainer"]
+margin_left = 130.0
+margin_right = 134.0
+margin_bottom = 118.0
+
+[node name="SetPointContainer" type="VBoxContainer" parent="ModeSelectorTab/Control/ControlsContainer"]
+margin_left = 138.0
+margin_right = 264.0
+margin_bottom = 118.0
+
+[node name="SetPointLabel" type="Label" parent="ModeSelectorTab/Control/ControlsContainer/SetPointContainer"]
+margin_right = 126.0
+margin_bottom = 14.0
+text = "Enter Set Point"
+align = 1
+
+[node name="XContainer" type="HBoxContainer" parent="ModeSelectorTab/Control/ControlsContainer/SetPointContainer"]
+margin_top = 18.0
+margin_right = 126.0
+margin_bottom = 42.0
+
+[node name="XLabel" type="Label" parent="ModeSelectorTab/Control/ControlsContainer/SetPointContainer/XContainer"]
+margin_top = 5.0
+margin_right = 64.0
+margin_bottom = 19.0
+text = "X position"
+
+[node name="XLineEdit" type="LineEdit" parent="ModeSelectorTab/Control/ControlsContainer/SetPointContainer/XContainer"]
+margin_left = 68.0
+margin_right = 126.0
+margin_bottom = 24.0
+text = "0"
+align = 2
+
+[node name="YContainer" type="HBoxContainer" parent="ModeSelectorTab/Control/ControlsContainer/SetPointContainer"]
+margin_top = 46.0
+margin_right = 126.0
+margin_bottom = 70.0
+
+[node name="YLabel" type="Label" parent="ModeSelectorTab/Control/ControlsContainer/SetPointContainer/YContainer"]
+margin_top = 5.0
+margin_right = 63.0
+margin_bottom = 19.0
+text = "Y position"
+
+[node name="YLineEdit" type="LineEdit" parent="ModeSelectorTab/Control/ControlsContainer/SetPointContainer/YContainer"]
+margin_left = 67.0
+margin_right = 125.0
+margin_bottom = 24.0
+text = "0"
+align = 2
+
+[node name="SetPointSetButton" type="Button" parent="ModeSelectorTab/Control/ControlsContainer/SetPointContainer"]
+margin_top = 74.0
+margin_right = 126.0
+margin_bottom = 94.0
+text = "Set"
+
+[node name="SetPointCenterButton" type="Button" parent="ModeSelectorTab/Control/ControlsContainer/SetPointContainer"]
+margin_top = 98.0
+margin_right = 126.0
+margin_bottom = 118.0
+text = "Center"
+
 [node name="Telemetry" type="GridContainer" parent="ModeSelectorTab"]
-margin_right = 40.0
-margin_bottom = 40.0
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
