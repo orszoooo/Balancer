@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ViewSettings.cs" type="Script" id=1]
+
+[node name="ViewSettings" type="PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1254.0
+margin_bottom = -766.0
+script = ExtResource( 1 )
+
+[node name="ViewSettings_VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 92.0
+margin_bottom = 93.0
+
+[node name="ViewSettings_Label" type="Label" parent="ViewSettings_VBoxContainer"]
+margin_right = 85.0
+margin_bottom = 14.0
+text = "View Settings"
+align = 1
+
+[node name="Reset_Button" type="Button" parent="ViewSettings_VBoxContainer"]
+margin_top = 18.0
+margin_right = 85.0
+margin_bottom = 38.0
+text = "Reset"
+
+[node name="ZoomIn_Button" type="Button" parent="ViewSettings_VBoxContainer"]
+margin_top = 42.0
+margin_right = 85.0
+margin_bottom = 62.0
+text = "+"
+
+[node name="ZoomOut_Button" type="Button" parent="ViewSettings_VBoxContainer"]
+margin_top = 66.0
+margin_right = 85.0
+margin_bottom = 86.0
+text = "-"
+
+[connection signal="pressed" from="ViewSettings_VBoxContainer/Reset_Button" to="." method="OnResetButtonPressed"]
+[connection signal="pressed" from="ViewSettings_VBoxContainer/ZoomIn_Button" to="." method="OnZoomInButtonPressed"]
+[connection signal="pressed" from="ViewSettings_VBoxContainer/ZoomOut_Button" to="." method="OnZoomOutButtonPressed"]

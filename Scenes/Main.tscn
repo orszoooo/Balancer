@@ -1,0 +1,146 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Scenes/Main.cs" type="Script" id=1]
+[ext_resource path="res://DataReadout.tscn" type="PackedScene" id=2]
+[ext_resource path="res://SetParam.tscn" type="PackedScene" id=3]
+[ext_resource path="res://COMcontrol.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ViewSettings.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Camera.cs" type="Script" id=6]
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_color = Color( 0.113725, 0.141176, 0.207843, 1 )
+
+[sub_resource type="PlaneMesh" id=7]
+material = SubResource( 8 )
+size = Vector2( 10, 10 )
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1.685, 0.05, 1.345 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.172549, 0.258824, 0.423529, 1 )
+
+[sub_resource type="CubeMesh" id=3]
+material = SubResource( 2 )
+size = Vector3( 3.37, 0.1, 2.69 )
+
+[sub_resource type="SphereShape" id=4]
+radius = 0.1
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0.741176, 0.207843, 0.207843, 1 )
+metallic = 0.26
+
+[sub_resource type="SphereMesh" id=6]
+material = SubResource( 5 )
+radius = 0.1
+height = 0.2
+
+[node name="Main" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Balancer3D" type="Spatial" parent="."]
+
+[node name="Background" type="MeshInstance" parent="Balancer3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
+mesh = SubResource( 7 )
+
+[node name="ResistivePanel" type="StaticBody" parent="Balancer3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0 )
+collision_layer = 2
+
+[node name="ResistivePanel_CollisionShape" type="CollisionShape" parent="Balancer3D/ResistivePanel"]
+shape = SubResource( 1 )
+
+[node name="ResistivePanel_MeshInstance" type="MeshInstance" parent="Balancer3D/ResistivePanel"]
+mesh = SubResource( 3 )
+
+[node name="Ball" type="KinematicBody" parent="Balancer3D"]
+
+[node name="Ball_CollisionShape" type="CollisionShape" parent="Balancer3D/Ball"]
+shape = SubResource( 4 )
+
+[node name="Ball_MeshInstance" type="MeshInstance" parent="Balancer3D/Ball"]
+mesh = SubResource( 6 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="Balancer3D"]
+transform = Transform( 0.707107, 0.640856, -0.298836, 0, 0.422618, 0.906308, 0.707107, -0.640856, 0.298836, -51.649, 30, 30.076 )
+shadow_enabled = true
+
+[node name="CameraPivot" type="Position3D" parent="Balancer3D"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3, 0 )
+
+[node name="Camera" type="Camera" parent="Balancer3D/CameraPivot"]
+transform = Transform( 1, 0, -1.49012e-08, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+projection = 1
+current = true
+fov = 55.0
+size = 3.0
+script = ExtResource( 6 )
+
+[node name="UI" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="DataCOM_VBoxContainer" type="VBoxContainer" parent="UI"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 158.0
+margin_bottom = 646.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SetParam" parent="UI/DataCOM_VBoxContainer" instance=ExtResource( 3 )]
+margin_bottom = 328.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="COMControl" parent="UI/DataCOM_VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 332.0
+margin_bottom = 466.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ViewSettings" parent="UI/DataCOM_VBoxContainer" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 470.0
+margin_right = 150.0
+margin_bottom = 570.0
+
+[node name="DataReadout" parent="UI" instance=ExtResource( 2 )]
+anchor_left = 0.992
+anchor_top = 0.01
+anchor_right = 0.992
+anchor_bottom = 0.01
+margin_left = -149.76
+margin_right = 0.23999
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PortNotSelectedAlert" type="AcceptDialog" parent="UI"]
+margin_left = 560.0
+margin_top = 352.0
+margin_right = 730.0
+margin_bottom = 410.0
+window_title = "Error"
+dialog_text = "Please select COM port!"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="Connected" from="." to="UI/DataCOM_VBoxContainer/COMControl" method="OnConnected"]
+[connection signal="Disconnected" from="." to="UI/DataCOM_VBoxContainer/COMControl" method="OnDisconnected"]
+[connection signal="input_event" from="Balancer3D/ResistivePanel" to="." method="OnResistivePanelInputEvent"]
+[connection signal="ConnectToCOM" from="UI/DataCOM_VBoxContainer/COMControl" to="." method="Connect"]
+[connection signal="DisconnectFromCOM" from="UI/DataCOM_VBoxContainer/COMControl" to="." method="Disconnect"]
+[connection signal="RefreshPortList" from="UI/DataCOM_VBoxContainer/COMControl" to="." method="RefreshPortList"]
+[connection signal="Start" from="UI/DataCOM_VBoxContainer/COMControl" to="." method="Start"]
+[connection signal="Stop" from="UI/DataCOM_VBoxContainer/COMControl" to="." method="Stop"]
+[connection signal="ViewReset" from="UI/DataCOM_VBoxContainer/ViewSettings" to="Balancer3D/CameraPivot/Camera" method="OnViewReset"]
+[connection signal="ViewZoomIn" from="UI/DataCOM_VBoxContainer/ViewSettings" to="Balancer3D/CameraPivot/Camera" method="OnViewZoomIn"]
+[connection signal="ViewZoomOut" from="UI/DataCOM_VBoxContainer/ViewSettings" to="Balancer3D/CameraPivot/Camera" method="OnViewZoomOut"]

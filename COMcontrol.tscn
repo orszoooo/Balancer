@@ -1,0 +1,80 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://COMcontrol.cs" type="Script" id=1]
+
+[node name="COMControl" type="PanelContainer"]
+margin_right = 150.0
+margin_bottom = 86.0
+script = ExtResource( 1 )
+
+[node name="COMsettings_VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 143.0
+margin_bottom = 127.0
+
+[node name="Port_HBoxContainer" type="HBoxContainer" parent="COMsettings_VBoxContainer"]
+margin_right = 136.0
+margin_bottom = 20.0
+
+[node name="Port_Label" type="Label" parent="COMsettings_VBoxContainer/Port_HBoxContainer"]
+margin_top = 3.0
+margin_right = 34.0
+margin_bottom = 17.0
+text = "Port: "
+
+[node name="Port_OptionButton" type="OptionButton" parent="COMsettings_VBoxContainer/Port_HBoxContainer"]
+margin_left = 38.0
+margin_right = 100.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+
+[node name="Refresh_Button" type="Button" parent="COMsettings_VBoxContainer/Port_HBoxContainer"]
+margin_left = 104.0
+margin_right = 136.0
+margin_bottom = 20.0
+text = "Ref"
+
+[node name="BaudRate_HBoxContainer" type="HBoxContainer" parent="COMsettings_VBoxContainer"]
+margin_top = 24.0
+margin_right = 136.0
+margin_bottom = 48.0
+
+[node name="BaudRate_Label" type="Label" parent="COMsettings_VBoxContainer/BaudRate_HBoxContainer"]
+margin_top = 5.0
+margin_right = 65.0
+margin_bottom = 19.0
+text = "Baud rate:"
+
+[node name="BaudRate_LineEdit" type="LineEdit" parent="COMsettings_VBoxContainer/BaudRate_HBoxContainer"]
+margin_left = 69.0
+margin_right = 136.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+text = "9600"
+align = 2
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="Connect_Button" type="Button" parent="COMsettings_VBoxContainer"]
+margin_top = 52.0
+margin_right = 136.0
+margin_bottom = 72.0
+text = "Connect"
+
+[node name="Start_Button" type="Button" parent="COMsettings_VBoxContainer"]
+margin_top = 76.0
+margin_right = 136.0
+margin_bottom = 96.0
+text = "Start"
+
+[node name="Stop_Button" type="Button" parent="COMsettings_VBoxContainer"]
+margin_top = 100.0
+margin_right = 136.0
+margin_bottom = 120.0
+text = "Stop"
+
+[connection signal="pressed" from="COMsettings_VBoxContainer/Port_HBoxContainer/Refresh_Button" to="." method="OnRefreshButtonPressed"]
+[connection signal="pressed" from="COMsettings_VBoxContainer/Connect_Button" to="." method="OnConnectButtonPressed"]
+[connection signal="pressed" from="COMsettings_VBoxContainer/Start_Button" to="." method="OnStartButtonPressed"]
+[connection signal="pressed" from="COMsettings_VBoxContainer/Stop_Button" to="." method="OnStopButtonPressed"]

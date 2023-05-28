@@ -1,0 +1,361 @@
+[gd_scene format=2]
+
+[node name="SetParam" type="PanelContainer"]
+margin_right = 150.0
+margin_bottom = 548.0
+
+[node name="SetParam_VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 143.0
+margin_bottom = 541.0
+
+[node name="SetParam_Label" type="Label" parent="SetParam_VBoxContainer"]
+margin_right = 136.0
+margin_bottom = 14.0
+text = "Balancer settings"
+align = 1
+
+[node name="Xpos_HBoxContainer" type="HBoxContainer" parent="SetParam_VBoxContainer"]
+margin_top = 18.0
+margin_right = 136.0
+margin_bottom = 42.0
+
+[node name="Xpos_Label" type="Label" parent="SetParam_VBoxContainer/Xpos_HBoxContainer"]
+margin_top = 5.0
+margin_right = 8.0
+margin_bottom = 19.0
+text = "X"
+
+[node name="Xpos_LineEdit" type="LineEdit" parent="SetParam_VBoxContainer/Xpos_HBoxContainer"]
+margin_left = 12.0
+margin_right = 136.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+align = 2
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="Ypos_HBoxContainer" type="HBoxContainer" parent="SetParam_VBoxContainer"]
+margin_top = 46.0
+margin_right = 136.0
+margin_bottom = 70.0
+
+[node name="Ypos_Label" type="Label" parent="SetParam_VBoxContainer/Ypos_HBoxContainer"]
+margin_top = 5.0
+margin_right = 7.0
+margin_bottom = 19.0
+text = "Y"
+
+[node name="Ypos_LineEdit" type="LineEdit" parent="SetParam_VBoxContainer/Ypos_HBoxContainer"]
+margin_left = 11.0
+margin_right = 136.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+align = 2
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="HSeparator" type="HSeparator" parent="SetParam_VBoxContainer"]
+margin_top = 74.0
+margin_right = 136.0
+margin_bottom = 78.0
+
+[node name="PID1_Label" type="Label" parent="SetParam_VBoxContainer"]
+margin_top = 82.0
+margin_right = 136.0
+margin_bottom = 96.0
+text = "PID 1"
+align = 1
+
+[node name="P1_HBoxContainer" type="HBoxContainer" parent="SetParam_VBoxContainer"]
+margin_top = 100.0
+margin_right = 136.0
+margin_bottom = 124.0
+
+[node name="P1_Label" type="Label" parent="SetParam_VBoxContainer/P1_HBoxContainer"]
+margin_top = 5.0
+margin_right = 8.0
+margin_bottom = 19.0
+text = "P"
+
+[node name="P1_LineEdit" type="LineEdit" parent="SetParam_VBoxContainer/P1_HBoxContainer"]
+margin_left = 12.0
+margin_right = 136.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+align = 2
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="I1_HBoxContainer" type="HBoxContainer" parent="SetParam_VBoxContainer"]
+margin_top = 128.0
+margin_right = 136.0
+margin_bottom = 152.0
+
+[node name="I1_Label" type="Label" parent="SetParam_VBoxContainer/I1_HBoxContainer"]
+margin_top = 5.0
+margin_right = 5.0
+margin_bottom = 19.0
+text = "I"
+
+[node name="I1_LineEdit" type="LineEdit" parent="SetParam_VBoxContainer/I1_HBoxContainer"]
+margin_left = 9.0
+margin_right = 136.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+align = 2
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="D1_HBoxContainer" type="HBoxContainer" parent="SetParam_VBoxContainer"]
+margin_top = 156.0
+margin_right = 136.0
+margin_bottom = 180.0
+
+[node name="D1_Label" type="Label" parent="SetParam_VBoxContainer/D1_HBoxContainer"]
+margin_top = 5.0
+margin_right = 10.0
+margin_bottom = 19.0
+text = "D"
+
+[node name="D1_LineEdit" type="LineEdit" parent="SetParam_VBoxContainer/D1_HBoxContainer"]
+margin_left = 14.0
+margin_right = 136.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+align = 2
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="HSeparator2" type="HSeparator" parent="SetParam_VBoxContainer"]
+margin_top = 184.0
+margin_right = 136.0
+margin_bottom = 188.0
+
+[node name="PID2_Label" type="Label" parent="SetParam_VBoxContainer"]
+margin_top = 192.0
+margin_right = 136.0
+margin_bottom = 206.0
+text = "PID 2"
+align = 1
+
+[node name="P2_HBoxContainer" type="HBoxContainer" parent="SetParam_VBoxContainer"]
+margin_top = 210.0
+margin_right = 136.0
+margin_bottom = 234.0
+
+[node name="P2_Label" type="Label" parent="SetParam_VBoxContainer/P2_HBoxContainer"]
+margin_top = 5.0
+margin_right = 8.0
+margin_bottom = 19.0
+text = "P"
+
+[node name="P2_LineEdit" type="LineEdit" parent="SetParam_VBoxContainer/P2_HBoxContainer"]
+margin_left = 12.0
+margin_right = 136.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+align = 2
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="I2_HBoxContainer" type="HBoxContainer" parent="SetParam_VBoxContainer"]
+margin_top = 238.0
+margin_right = 136.0
+margin_bottom = 262.0
+
+[node name="I2_Label" type="Label" parent="SetParam_VBoxContainer/I2_HBoxContainer"]
+margin_top = 5.0
+margin_right = 5.0
+margin_bottom = 19.0
+text = "I"
+
+[node name="I2_LineEdit" type="LineEdit" parent="SetParam_VBoxContainer/I2_HBoxContainer"]
+margin_left = 9.0
+margin_right = 136.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+align = 2
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="D2_HBoxContainer" type="HBoxContainer" parent="SetParam_VBoxContainer"]
+margin_top = 266.0
+margin_right = 136.0
+margin_bottom = 290.0
+
+[node name="D2_Label" type="Label" parent="SetParam_VBoxContainer/D2_HBoxContainer"]
+margin_top = 5.0
+margin_right = 10.0
+margin_bottom = 19.0
+text = "D"
+
+[node name="D2_LineEdit" type="LineEdit" parent="SetParam_VBoxContainer/D2_HBoxContainer"]
+margin_left = 14.0
+margin_right = 136.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+align = 2
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="HSeparator3" type="HSeparator" parent="SetParam_VBoxContainer"]
+visible = false
+margin_top = 294.0
+margin_right = 136.0
+margin_bottom = 298.0
+
+[node name="PID3_Label" type="Label" parent="SetParam_VBoxContainer"]
+visible = false
+margin_top = 302.0
+margin_right = 136.0
+margin_bottom = 316.0
+text = "PID 3"
+align = 1
+
+[node name="P3_HBoxContainer" type="HBoxContainer" parent="SetParam_VBoxContainer"]
+visible = false
+margin_top = 320.0
+margin_right = 136.0
+margin_bottom = 344.0
+
+[node name="P3_Label" type="Label" parent="SetParam_VBoxContainer/P3_HBoxContainer"]
+margin_top = 5.0
+margin_right = 8.0
+margin_bottom = 19.0
+text = "P"
+
+[node name="P3_LineEdit" type="LineEdit" parent="SetParam_VBoxContainer/P3_HBoxContainer"]
+margin_left = 12.0
+margin_right = 136.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+align = 2
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="I3_HBoxContainer" type="HBoxContainer" parent="SetParam_VBoxContainer"]
+visible = false
+margin_top = 348.0
+margin_right = 136.0
+margin_bottom = 372.0
+
+[node name="I3_Label" type="Label" parent="SetParam_VBoxContainer/I3_HBoxContainer"]
+margin_top = 5.0
+margin_right = 5.0
+margin_bottom = 19.0
+text = "I"
+
+[node name="I3_LineEdit" type="LineEdit" parent="SetParam_VBoxContainer/I3_HBoxContainer"]
+margin_left = 9.0
+margin_right = 136.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+align = 2
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="D3_HBoxContainer" type="HBoxContainer" parent="SetParam_VBoxContainer"]
+visible = false
+margin_top = 376.0
+margin_right = 136.0
+margin_bottom = 400.0
+
+[node name="D3_Label" type="Label" parent="SetParam_VBoxContainer/D3_HBoxContainer"]
+margin_top = 5.0
+margin_right = 10.0
+margin_bottom = 19.0
+text = "D"
+
+[node name="D3_LineEdit" type="LineEdit" parent="SetParam_VBoxContainer/D3_HBoxContainer"]
+margin_left = 14.0
+margin_right = 136.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+align = 2
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="HSeparator4" type="HSeparator" parent="SetParam_VBoxContainer"]
+visible = false
+margin_top = 404.0
+margin_right = 136.0
+margin_bottom = 408.0
+
+[node name="PID4_Label" type="Label" parent="SetParam_VBoxContainer"]
+visible = false
+margin_top = 412.0
+margin_right = 136.0
+margin_bottom = 426.0
+text = "PID 4"
+align = 1
+
+[node name="P4_HBoxContainer" type="HBoxContainer" parent="SetParam_VBoxContainer"]
+visible = false
+margin_top = 430.0
+margin_right = 136.0
+margin_bottom = 454.0
+
+[node name="P4_Label" type="Label" parent="SetParam_VBoxContainer/P4_HBoxContainer"]
+margin_top = 5.0
+margin_right = 8.0
+margin_bottom = 19.0
+text = "P"
+
+[node name="P4_LineEdit" type="LineEdit" parent="SetParam_VBoxContainer/P4_HBoxContainer"]
+margin_left = 12.0
+margin_right = 136.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+align = 2
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="I4_HBoxContainer" type="HBoxContainer" parent="SetParam_VBoxContainer"]
+visible = false
+margin_top = 430.0
+margin_right = 136.0
+margin_bottom = 454.0
+
+[node name="I4_Label" type="Label" parent="SetParam_VBoxContainer/I4_HBoxContainer"]
+margin_top = 5.0
+margin_right = 5.0
+margin_bottom = 19.0
+text = "I"
+
+[node name="I4_LineEdit" type="LineEdit" parent="SetParam_VBoxContainer/I4_HBoxContainer"]
+margin_left = 9.0
+margin_right = 136.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+align = 2
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="D4_HBoxContainer" type="HBoxContainer" parent="SetParam_VBoxContainer"]
+visible = false
+margin_top = 430.0
+margin_right = 136.0
+margin_bottom = 454.0
+
+[node name="D4_Label" type="Label" parent="SetParam_VBoxContainer/D4_HBoxContainer"]
+margin_top = 5.0
+margin_right = 10.0
+margin_bottom = 19.0
+text = "D"
+
+[node name="D4_LineEdit" type="LineEdit" parent="SetParam_VBoxContainer/D4_HBoxContainer"]
+margin_left = 14.0
+margin_right = 136.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+align = 2
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="Send_Button" type="Button" parent="SetParam_VBoxContainer"]
+margin_top = 294.0
+margin_right = 136.0
+margin_bottom = 314.0
+text = "Send"
