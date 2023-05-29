@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://Scenes/Main.cs" type="Script" id=1]
+[ext_resource path="res://Scripts/Main.cs" type="Script" id=1]
 [ext_resource path="res://Scenes/DataReadout.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/SetParam.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/COMcontrol.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/ViewSettings.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Camera.cs" type="Script" id=6]
+[ext_resource path="res://Scripts/Camera.cs" type="Script" id=6]
 
 [sub_resource type="SpatialMaterial" id=8]
 albedo_color = Color( 0.113725, 0.141176, 0.207843, 1 )
