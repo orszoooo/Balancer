@@ -1,26 +1,36 @@
-using Regulators;
+using System.IO.Ports;
 
-namespace Balancer
+public class Balancer
 {
-    public class Balancer
+    //Resistive panel resolution
+    private readonly int _xPanelResolution = 337;
+    private readonly int _yPanelResolution = 269;
+
+
+    //Are they realy needed?
+    public int xPanelResolution { get { return _xPanelResolution; }}
+    public int yPanelResolution { get { return _yPanelResolution; }} 
+
+    //Current position
+    public int XCurrentPosition {get; set;}
+    public int YCurrentPosition {get; set;}
+
+    //Desired position of ball 
+    public int XSetpoint {get; set;}
+    public int YSetpoint {get; set;}
+
+    //Regulators
+    public PID PIDRegulator1 { get; }
+    public PID PIDRegulator2 { get; }
+
+    //Communication
+    public SerialPort SerialCom {get;}
+
+    public Balancer()
     {
-        //
-        private const int _x_dimmension = 337;
-        private const int _y_dimmension = 269;
-        //Current position
-        private int _x_pos {get; set;}
-        private int _y_pos {get; set;}
-
-        //Desired position of ball 
-        private int _x_setpoint {get; set;}
-        private int _y_setpoint {get; set;}
-
-        //Regulators
-        private PID _reg1;
-        private PID _reg2;
-
-        public int XDim { get { return _x_dimmension; }}
-        public int YDim { get { return _y_dimmension; }} 
+        PIDRegulator1 = new PID(0.0,0.0,0.0);
+        PIDRegulator2 = new PID(0.0,0.0,0.0);
+        SerialCom = new SerialPort();
     }
 }
 
