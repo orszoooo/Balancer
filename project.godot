@@ -25,6 +25,10 @@ window/size/height=800
 
 common/drop_mouse_on_gui_input_disabled=true
 
+[locale]
+
+locale_filter=[ 0, [ "en", "en_GB" ] ]
+
 [mono]
 
 project/assembly_name="Balancer"
