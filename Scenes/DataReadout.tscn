@@ -8,18 +8,72 @@ margin_bottom = 416.0
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 99.0
-margin_bottom = 409.0
+margin_bottom = 491.0
 
-[node name="Current_Label" type="Label" parent="DataReadout_VBoxContainer"]
+[node name="SetPoint_Label" type="Label" parent="DataReadout_VBoxContainer"]
 margin_right = 92.0
 margin_bottom = 14.0
+text = "Set Point"
+align = 1
+
+[node name="Xset_HBoxContainer" type="HBoxContainer" parent="DataReadout_VBoxContainer"]
+margin_top = 18.0
+margin_right = 92.0
+margin_bottom = 42.0
+
+[node name="Xset_Label" type="Label" parent="DataReadout_VBoxContainer/Xset_HBoxContainer"]
+margin_top = 5.0
+margin_right = 8.0
+margin_bottom = 19.0
+text = "X"
+
+[node name="Xset_LineEdit" type="LineEdit" parent="DataReadout_VBoxContainer/Xset_HBoxContainer"]
+margin_left = 12.0
+margin_right = 92.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+align = 2
+editable = false
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="Yset_HBoxContainer" type="HBoxContainer" parent="DataReadout_VBoxContainer"]
+margin_top = 46.0
+margin_right = 92.0
+margin_bottom = 70.0
+
+[node name="Yset_Label" type="Label" parent="DataReadout_VBoxContainer/Yset_HBoxContainer"]
+margin_top = 5.0
+margin_right = 7.0
+margin_bottom = 19.0
+text = "Y"
+
+[node name="Yset_LineEdit" type="LineEdit" parent="DataReadout_VBoxContainer/Yset_HBoxContainer"]
+margin_left = 11.0
+margin_right = 92.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+align = 2
+editable = false
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="HSeparator5" type="HSeparator" parent="DataReadout_VBoxContainer"]
+margin_top = 74.0
+margin_right = 92.0
+margin_bottom = 78.0
+
+[node name="Current_Label" type="Label" parent="DataReadout_VBoxContainer"]
+margin_top = 82.0
+margin_right = 92.0
+margin_bottom = 96.0
 text = "Current "
 align = 1
 
 [node name="Xpos_HBoxContainer" type="HBoxContainer" parent="DataReadout_VBoxContainer"]
-margin_top = 18.0
+margin_top = 100.0
 margin_right = 92.0
-margin_bottom = 42.0
+margin_bottom = 124.0
 
 [node name="Xpos_Label" type="Label" parent="DataReadout_VBoxContainer/Xpos_HBoxContainer"]
 margin_top = 5.0
@@ -38,9 +92,9 @@ caret_blink = true
 caret_blink_speed = 0.5
 
 [node name="Ypos_HBoxContainer" type="HBoxContainer" parent="DataReadout_VBoxContainer"]
-margin_top = 46.0
+margin_top = 128.0
 margin_right = 92.0
-margin_bottom = 70.0
+margin_bottom = 152.0
 
 [node name="Ypos_Label" type="Label" parent="DataReadout_VBoxContainer/Ypos_HBoxContainer"]
 margin_top = 5.0
@@ -59,21 +113,21 @@ caret_blink = true
 caret_blink_speed = 0.5
 
 [node name="HSeparator" type="HSeparator" parent="DataReadout_VBoxContainer"]
-margin_top = 74.0
+margin_top = 156.0
 margin_right = 92.0
-margin_bottom = 78.0
+margin_bottom = 160.0
 
 [node name="PID1_Label" type="Label" parent="DataReadout_VBoxContainer"]
-margin_top = 82.0
+margin_top = 164.0
 margin_right = 92.0
-margin_bottom = 96.0
+margin_bottom = 178.0
 text = "PID 1"
 align = 1
 
 [node name="Err1_HBoxContainer" type="HBoxContainer" parent="DataReadout_VBoxContainer"]
-margin_top = 100.0
+margin_top = 182.0
 margin_right = 92.0
-margin_bottom = 124.0
+margin_bottom = 206.0
 
 [node name="Err1_Label" type="Label" parent="DataReadout_VBoxContainer/Err1_HBoxContainer"]
 margin_top = 5.0
@@ -92,9 +146,9 @@ caret_blink = true
 caret_blink_speed = 0.5
 
 [node name="Y1_HBoxContainer" type="HBoxContainer" parent="DataReadout_VBoxContainer"]
-margin_top = 128.0
+margin_top = 210.0
 margin_right = 92.0
-margin_bottom = 152.0
+margin_bottom = 234.0
 
 [node name="Y1_Label" type="Label" parent="DataReadout_VBoxContainer/Y1_HBoxContainer"]
 margin_top = 5.0
@@ -111,9 +165,9 @@ align = 2
 editable = false
 
 [node name="P1_HBoxContainer" type="HBoxContainer" parent="DataReadout_VBoxContainer"]
-margin_top = 156.0
+margin_top = 238.0
 margin_right = 92.0
-margin_bottom = 180.0
+margin_bottom = 262.0
 
 [node name="P1_Label" type="Label" parent="DataReadout_VBoxContainer/P1_HBoxContainer"]
 margin_top = 5.0
@@ -132,9 +186,9 @@ caret_blink = true
 caret_blink_speed = 0.5
 
 [node name="I1_HBoxContainer" type="HBoxContainer" parent="DataReadout_VBoxContainer"]
-margin_top = 184.0
+margin_top = 266.0
 margin_right = 92.0
-margin_bottom = 208.0
+margin_bottom = 290.0
 
 [node name="I1_Label" type="Label" parent="DataReadout_VBoxContainer/I1_HBoxContainer"]
 margin_top = 5.0
@@ -153,9 +207,9 @@ caret_blink = true
 caret_blink_speed = 0.5
 
 [node name="D1_HBoxContainer" type="HBoxContainer" parent="DataReadout_VBoxContainer"]
-margin_top = 212.0
+margin_top = 294.0
 margin_right = 92.0
-margin_bottom = 236.0
+margin_bottom = 318.0
 
 [node name="D1_Label" type="Label" parent="DataReadout_VBoxContainer/D1_HBoxContainer"]
 margin_top = 5.0
@@ -174,21 +228,21 @@ caret_blink = true
 caret_blink_speed = 0.5
 
 [node name="HSeparator2" type="HSeparator" parent="DataReadout_VBoxContainer"]
-margin_top = 240.0
+margin_top = 322.0
 margin_right = 92.0
-margin_bottom = 244.0
+margin_bottom = 326.0
 
 [node name="PID2_Label" type="Label" parent="DataReadout_VBoxContainer"]
-margin_top = 248.0
+margin_top = 330.0
 margin_right = 92.0
-margin_bottom = 262.0
+margin_bottom = 344.0
 text = "PID 2"
 align = 1
 
 [node name="Err2_HBoxContainer" type="HBoxContainer" parent="DataReadout_VBoxContainer"]
-margin_top = 266.0
+margin_top = 348.0
 margin_right = 92.0
-margin_bottom = 290.0
+margin_bottom = 372.0
 
 [node name="Err2_Label" type="Label" parent="DataReadout_VBoxContainer/Err2_HBoxContainer"]
 margin_top = 5.0
@@ -207,9 +261,9 @@ caret_blink = true
 caret_blink_speed = 0.5
 
 [node name="Y2_HBoxContainer" type="HBoxContainer" parent="DataReadout_VBoxContainer"]
-margin_top = 294.0
+margin_top = 376.0
 margin_right = 92.0
-margin_bottom = 318.0
+margin_bottom = 400.0
 
 [node name="Y2_Label" type="Label" parent="DataReadout_VBoxContainer/Y2_HBoxContainer"]
 margin_top = 5.0
@@ -226,9 +280,9 @@ align = 2
 editable = false
 
 [node name="P2_HBoxContainer" type="HBoxContainer" parent="DataReadout_VBoxContainer"]
-margin_top = 322.0
+margin_top = 404.0
 margin_right = 92.0
-margin_bottom = 346.0
+margin_bottom = 428.0
 
 [node name="P2_Label" type="Label" parent="DataReadout_VBoxContainer/P2_HBoxContainer"]
 margin_top = 5.0
@@ -247,9 +301,9 @@ caret_blink = true
 caret_blink_speed = 0.5
 
 [node name="I2_HBoxContainer" type="HBoxContainer" parent="DataReadout_VBoxContainer"]
-margin_top = 350.0
+margin_top = 432.0
 margin_right = 92.0
-margin_bottom = 374.0
+margin_bottom = 456.0
 
 [node name="I2_Label" type="Label" parent="DataReadout_VBoxContainer/I2_HBoxContainer"]
 margin_top = 5.0
@@ -268,9 +322,9 @@ caret_blink = true
 caret_blink_speed = 0.5
 
 [node name="D2_HBoxContainer" type="HBoxContainer" parent="DataReadout_VBoxContainer"]
-margin_top = 378.0
+margin_top = 460.0
 margin_right = 92.0
-margin_bottom = 402.0
+margin_bottom = 484.0
 
 [node name="D2_Label" type="Label" parent="DataReadout_VBoxContainer/D2_HBoxContainer"]
 margin_top = 5.0

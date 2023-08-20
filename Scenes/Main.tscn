@@ -136,6 +136,7 @@ __meta__ = {
 [connection signal="Connected" from="." to="UI/DataCOM_VBoxContainer/COMControl" method="OnConnected"]
 [connection signal="Disconnected" from="." to="UI/DataCOM_VBoxContainer/COMControl" method="OnDisconnected"]
 [connection signal="input_event" from="Balancer3D/ResistivePanel" to="." method="OnResistivePanelInputEvent"]
+[connection signal="SendParameters" from="UI/DataCOM_VBoxContainer/SetParam" to="." method="OnSendParameters"]
 [connection signal="ConnectToCOM" from="UI/DataCOM_VBoxContainer/COMControl" to="." method="Connect"]
 [connection signal="DisconnectFromCOM" from="UI/DataCOM_VBoxContainer/COMControl" to="." method="Disconnect"]
 [connection signal="RefreshPortList" from="UI/DataCOM_VBoxContainer/COMControl" to="." method="RefreshPortList"]
