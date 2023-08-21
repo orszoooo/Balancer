@@ -15,7 +15,9 @@ public partial class Main : Spatial
     private OptionButton _portList;
     private Camera _camera;
     private const int _RESISTIVE_PANEL_LAYER = 2;
-    private bool _showReceivedMessages = false;
+
+    [Export]
+    private readonly bool _showReceivedMessages = false;
 
 
     // Called when the node enters the scene tree for the first time.

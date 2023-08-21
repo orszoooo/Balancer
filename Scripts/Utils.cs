@@ -31,6 +31,8 @@ public partial class Main : Spatial
         {
             _balancer.XSetpoint = (int)ReceivedStringToNumber(splitParam[i + 1]);
             _balancer.YSetpoint = (int)ReceivedStringToNumber(splitParam[i + 2]);
+            _balancer.XCurrentPosition = (int)ReceivedStringToNumber(splitParam[i + 3]);
+            _balancer.YCurrentPosition = (int)ReceivedStringToNumber(splitParam[i + 4]);
         }
 
         if (splitParam[i] == "PID1")
