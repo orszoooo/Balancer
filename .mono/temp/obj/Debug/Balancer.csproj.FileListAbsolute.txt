@@ -1,9 +1,0 @@
-C:\Users\orszo\OneDrive\Pulpit\SKN\Balancer\.mono\temp\bin\Debug\Balancer.dll
-C:\Users\orszo\OneDrive\Pulpit\SKN\Balancer\.mono\temp\bin\Debug\Balancer.pdb
-C:\Users\orszo\OneDrive\Pulpit\SKN\Balancer\.mono\temp\obj\Debug\Balancer.csproj.AssemblyReference.cache
-C:\Users\orszo\OneDrive\Pulpit\SKN\Balancer\.mono\temp\obj\Debug\Balancer.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\orszo\OneDrive\Pulpit\SKN\Balancer\.mono\temp\obj\Debug\Balancer.AssemblyInfoInputs.cache
-C:\Users\orszo\OneDrive\Pulpit\SKN\Balancer\.mono\temp\obj\Debug\Balancer.AssemblyInfo.cs
-C:\Users\orszo\OneDrive\Pulpit\SKN\Balancer\.mono\temp\obj\Debug\Balancer.csproj.CoreCompileInputs.cache
-C:\Users\orszo\OneDrive\Pulpit\SKN\Balancer\.mono\temp\obj\Debug\Balancer.dll
-C:\Users\orszo\OneDrive\Pulpit\SKN\Balancer\.mono\temp\obj\Debug\Balancer.pdb
