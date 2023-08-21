@@ -4,8 +4,6 @@ using System.Globalization;
 
 public partial class Main : Spatial
 {
-    //337x269
-
     [Signal] //Handshaking
     public delegate void Connected();
 
@@ -17,6 +15,7 @@ public partial class Main : Spatial
     private OptionButton _portList;
     private Camera _camera;
     private const int _RESISTIVE_PANEL_LAYER = 2;
+    private bool _showReceivedMessages = false;
 
 
     // Called when the node enters the scene tree for the first time.

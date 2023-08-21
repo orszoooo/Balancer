@@ -1,5 +1,4 @@
 using Godot;
-using System;
 using System.Globalization;
 
 public partial class Main : Spatial
@@ -7,7 +6,9 @@ public partial class Main : Spatial
     // Parses input from serial port into List of doubles that is used to update UI elements
     public void ParseInput(string inputParam)
     {
-        GD.Print("RECEIVED: " + inputParam);
+        if(_showReceivedMessages)
+            GD.Print("RECEIVED: " + inputParam);
+
         string[] splitParam = inputParam.Split(' ');
         bool syncActive = false;
 
