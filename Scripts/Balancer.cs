@@ -6,8 +6,6 @@ public class Balancer
     private readonly int _xPanelResolution = 337;
     private readonly int _yPanelResolution = 269;
 
-
-    //Are they realy needed?
     public int xPanelResolution { get { return _xPanelResolution; }}
     public int yPanelResolution { get { return _yPanelResolution; }} 
 
