@@ -11,6 +11,9 @@ The aim of this project is to develop application, in C# and Godot, that will co
 - 3D view configuration (distance of the camera from the ball and balancer)
 - Support for setting the ball position with a mouse click
 - Support for application's window resizing
+- Full implementation of the serial commands (receiving and sending parameters)
+- Balancer object(OOP programming) that stores all parameters of balancer for better organization of the code
+- Arduino app to test all commands and simulate ball position
 
 # List of commands - communication between balancer and computer
 Coming out of the app:
@@ -21,9 +24,6 @@ Coming out of the app:
 - PIDn {P} {I} {D} – sending parameters to PID controllers, where n is the controller number 
 
 # To be done in the near future
-- Full implementation of the serial commands (receiving and sending parameters)
-- Balancer object(OOP programming) that stores all parameters of balancer for better organization of the code
-- Arduino app to test all commands and simulate ball position
 - Smooth ball movement animation
 - Marker of the current set position
 - Sliders for precise parameter setting
